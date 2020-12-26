@@ -82,7 +82,7 @@ data Canonical =
 
 isKernel :: Name -> Bool
 isKernel (Name author _) =
-  author == elm || author == elm_explorations
+  author == elm || author == elm_explorations || author == nickseagull
 
 
 toChars :: Name -> String
@@ -190,6 +190,11 @@ elm =
 elm_explorations :: Author
 elm_explorations =
   Utf8.fromChars "elm-explorations"
+
+{-# NOINLINE nickseagull #-}
+nickseagull :: Author
+nickseagull =
+  Utf8.fromChars "nickseagull"
 
 
 
